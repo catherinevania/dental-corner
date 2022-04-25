@@ -2,17 +2,28 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 //path
-import { HOME, LOGIN } from "./Path";
+import { HOME, LOGIN, REGISTER, ARTICLE, BOOKING, MEDICALLOG } from "./Path";
 
 //pages
-import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import Navbar from "../components/Navbar";
+import Article from "../pages/Article";
+import MedicalLog from "../pages/MedicalLog";
+import Booking from "../pages/Booking";
 
 const RouterConfig = () => {
   return (
     <Routes>
-      <Route exact path={HOME} element={<HomePage />} />
       <Route exact path={LOGIN} element={<LoginPage />} />
+      <Route exact path={REGISTER} element={<RegisterPage />} />
+      <Route element={<Navbar />}>
+        <Route exact path={HOME} element={<HomePage />} />
+        <Route exact path={ARTICLE} element={<Article />} />
+        <Route exact path={MEDICALLOG} element={<MedicalLog />} />
+        <Route exact path={BOOKING} element={<Booking />} />
+      </Route>
     </Routes>
   );
 };
