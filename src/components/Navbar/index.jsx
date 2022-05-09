@@ -6,23 +6,23 @@ import { Flexer } from "../CustomDiv";
 import { Button } from "../Button";
 
 const Navbar = () => {
-  return (
-    <div>
-      <Container>
-        <Flexer itemCenter spaceBetween>
-          <Logo src={LOGO} alt="Logo" />
-          <Flexer>
-            <Container1>
-              <Link></Link>
-            </Container1>
-          </Flexer>
-        </Flexer>
-      </Container>
-      <div>
-        <Outlet />
-      </div>
-    </div>
-  );
+      return (
+            <div>
+                  <Container>
+                        <Flexer itemCenter spaceBetween>
+                              <Logo src={LOGO} alt="Logo" />
+                              <Flexer>
+                                    <Container1>
+                                          <Link to="/"></Link>
+                                    </Container1>
+                              </Flexer>
+                        </Flexer>
+                  </Container>
+                  <div>
+                        <Outlet />
+                  </div>
+            </div>
+      );
 };
 
 export default Navbar;
