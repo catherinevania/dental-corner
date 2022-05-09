@@ -1,5 +1,8 @@
 import styled, { css } from "styled-components";
 
+export const OuterDiv = styled.div``
+export const ContentWrapper = styled.div``
+
 export const Logo = styled.img`
   width: 142.5px;
   height: 49px;
@@ -20,3 +23,5 @@ export const ProfilePhoto = styled.img`
   height: 48px;
   border-radius: 100%;
 `;
+
+export const outerDiv = styled.div``

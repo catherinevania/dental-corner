@@ -10,6 +10,7 @@ export const Button = styled.button`
       padding: 10px 20px 10px 20px;
       border-radius: 5px;
       border: 0px;
+      transition: 250ms ;
       &:hover {
             cursor: pointer;
             background-color: ${colors.primaryDark};
