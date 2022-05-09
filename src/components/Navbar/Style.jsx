@@ -15,3 +15,8 @@ export const Container1 = styled.div`
   justify-content: space-between;
   /* margin-right: 48px; */
 `;
+export const ProfilePhoto = styled.img`
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+`;
