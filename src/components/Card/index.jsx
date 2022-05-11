@@ -1,55 +1,56 @@
 import React from "react";
+import IMG from "../../assets/img/article.jpg";
+import { Link } from "react-router-dom";
+import { Button, Header, Paragraph } from "../../components";
 import {
-  Typography,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-} from "@mui/material";
-import { ButtonGroup } from "../../components";
+  InfoContainer,
+  Image,
+  Container,
+  Container2,
+  DateContainer,
+  TitleContainer,
+  TitleContainer2,
+  ParagraphContainer,
+  ButtonContainer,
+} from "./style";
 
-const Card = ({
-  title,
-  useImage,
-  centered,
-  content,
-  date,
-  useBtn,
-  bold,
-  img = "defaut image",
-  btnContent = "click me",
-  linkTo = "/",
-}) => {
+export const Card1 = () => {
   return (
-    <Card
-      sx={{ maxWidth: 275, boxShadow: 3, mx: 3, my: 3, borderRadius: 5 }}
-      align={centered ? "center" : "left"}
-    >
-      <CardContent>
-        <Typography variant="h2">{title}</Typography>
-        {useImage && (
-          <CardMedia
-            component="img"
-            image={img}
-            width="75%"
-            alt={img}
-            sx={{ borderRadius: 5, mb: 2 }}
-          />
-        )}
-        <Typography variant="h3">{date}</Typography>
-        <Typography variant="h3" fontWeight={bold ? "bold" : "normal"}>
-          {content}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        {useBtn && (
-          <Link to={linkTo} style={{ width: "100%", textDecoration: "none" }}>
-            <Button ternary content={btnContent} />
-          </Link>
-        )}
-      </CardActions>
-    </Card>
+    <Container>
+      <Link to="../../pages/Article">
+        <Image src={IMG} alt="Image" />
+      </Link>
+      <InfoContainer>
+        <DateContainer>
+          <Paragraph b1med>11 Mei 2022</Paragraph>
+        </DateContainer>
+        <TitleContainer>
+          <Header h7 bold>
+            Get 50% Discount for Scaling
+          </Header>
+        </TitleContainer>
+      </InfoContainer>
+    </Container>
   );
 };
 
-export default CustomCard;
+export const Card2 = () => {
+  return (
+    <Container2>
+      <TitleContainer2>
+        <Header h6 bold>
+          Consultation
+        </Header>
+      </TitleContainer2>
+      <ParagraphContainer>
+        <Header h7 medium>
+          Pilih jadwal untuk melakukan konsultasi tentang keluhan anda terkait
+          kesehatan gigi
+        </Header>
+      </ParagraphContainer>
+      <ButtonContainer>
+        <Button>Book Consultation</Button>
+      </ButtonContainer>
+    </Container2>
+  );
+};
